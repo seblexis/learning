@@ -3,4 +3,4 @@
 
 Notes on Clean Code
 
-[Chapter](https://github.com/seblexis/notes/blob/master/clean_code/chapter14.md)
+[Chapter 14](https://github.com/seblexis/notes/blob/master/clean_code/chapter14.md)
