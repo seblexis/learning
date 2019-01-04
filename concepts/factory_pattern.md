@@ -1,5 +1,5 @@
 ## Factory pattern 
-*for C#* 
+*for C#*  
 [Source](https://www.dofactory.com/net/factory-method-design-pattern)  
 
 * Definition: Pattern that abstracts creation of class instances. 
