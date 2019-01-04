@@ -8,6 +8,10 @@
 
 * Implementation: You create a Factory method on the abstract class, e.g., FactoryMethod(). You then write implementations of this method for each implementations of that class. This allows, for example, to iterate over a list of implementations of the abstract class and create instances of each by calling FactoryMethod() on each. 
 
+* Related concepts: 
+  * **Liskov Substitution Principle**: Classes should be replaceable by its superclass. When following factory pattern, the implementations of the abstract class, i.e., its superclass, are replaceable by its superclass (Documents). That way, iteratively calling the same method on them is possible.  
+  * **Polymorphism**: Two classes can share the same behaviour (FactoryMethod()) but implement them very differently. 
+
 * Example  
 ```
                  
