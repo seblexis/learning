@@ -1,4 +1,4 @@
-## Chapter 14
+## Chapter 14: Successive Refinement
 
 * Arguments/functions: 
   * When looping through an array and then calling a function in the loop, it's dirty to pass the array and the current index. (p. 231)
