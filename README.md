@@ -1,6 +1,6 @@
 # Learning
 Notes for learning
 
-[Clean Code](https://github.com/seblexis/learning/clean_code), by Robert Martin
+[Clean Code](https://github.com/seblexis/learning/tree/master/clean_code), by Robert Martin
 
-[Concepts](https://github.com/seblexis/learning/concepts)
+[Concepts](https://github.com/seblexis/learning/tree/master/concepts)
