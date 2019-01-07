@@ -32,3 +32,20 @@ supermethod() {
 supermethod();
 ``` 
 This way, we make sure that method1 is called before what used to be the core functionality of method2 (adding var 1 and var2).
+
+### Unencapsulated conditional 
+*Code smell. Extensive conditional statement that could be wrapped into method*  
+**Example**  
+```
+if (expected == null | actual == null | areStringsEqual() ) {}
+```
+**Problem:** Readability  
+**Solution**  
+```
+if (shouldNotCompact()) {}
+Boolean shouldNotCompact() {
+  return (expected == null | actual == null | areStringsEqual() )
+}
+```
+
+
