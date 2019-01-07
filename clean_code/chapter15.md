@@ -48,4 +48,7 @@ Boolean shouldNotCompact() {
 }
 ```
 
+### Naming 
+* Negatives are harder to understand than positives: Rather than having a method ```shouldNotCompact``` have a method ```CanCompact```. 
+* Scope Encoding: Don't include type in names. Unnecessary (especially in strictly typed languages)
 
