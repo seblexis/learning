@@ -1,6 +1,8 @@
 ## Chapter15: JUnit Internals
 *Refactoring on the example of JUnit code*
 
+> [N]o module is immune from imporvement, and each of us has the responsibility to leave the code a little better than we found it
+
 ### Hidden temporal coupling 
 Code smell. When the error-free running of the code depends on two (or more) methods being called in a temporal order without this being obvious.  
 
