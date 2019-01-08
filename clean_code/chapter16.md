@@ -93,5 +93,8 @@ public enum Weekdays {
  }
 ```
 
+### Feature envy (p. 278)  
+When a class contains a method (or other things) that rather belongs in another class  
+
 ### Errata  
 * Simplifying functions: If a function is only ever called by another function, think about integrating it into the other function (p. 277). *Seems like this could violate SRP*
