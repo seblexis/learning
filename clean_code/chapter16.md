@@ -96,5 +96,43 @@ public enum Weekdays {
 ### Feature envy (p. 278)  
 When a class contains a method (or other things) that rather belongs in another class  
 
+### Temporary variable (p. 279)  
+* A variable with a short lifetime, limited (local) scope. For example, only used within one method.  
+* Explaining temporary variables: use temporary values to make your code more understandable  
+
+**Example**  
+Old code  
+```
+ public static SerialDate addMonths(final int months, 
+                                       final SerialDate base) {
+
+        final int yy = (12 * base.getYYYY() + base.getMonth() + months - 1) 
+                       / 12;
+        final int mm = (12 * base.getYYYY() + base.getMonth() + months - 1) 
+                       % 12 + 1;
+        final int dd = Math.min(
+            base.getDayOfMonth(), SerialDate.lastDayOfMonth(mm, yy)
+        );
+        return SerialDate.createInstance(dd, mm, yy);
+
+    }
+```
+Improved code:  
+```
+  public DayDate plusMonths(int months) {
+    int thisMonthAsOrdinal = getMonth().toInt() - Month.JANUARY.toInt();
+    int thisMonthAndYearAsOrdinal = 12 * getYear() + thisMonthAsOrdinal;
+    int resultMonthAndYearAsOrdinal = thisMonthAndYearAsOrdinal + months;
+    int resultYear = resultMonthAndYearAsOrdinal / 12;
+    int resultMonthAsOrdinal = resultMonthAndYearAsOrdinal % 12 + Month.JANUARY.toInt();
+    Month resultMonth = Month.fromInt(resultMonthAsOrdinal);
+    int resultDay = correctLastDayOfMonth(getDayOfMonth(), resultMonth, resultYear);
+    return DayDateFactory.makeDate(resultDay, resultMonth, resultYear);
+  }
+```
+
 ### Errata  
-* Simplifying functions: If a function is only ever called by another function, think about integrating it into the other function (p. 277). *Seems like this could violate SRP*
+* Simplifying functions: If a function is only ever called by another function, think about integrating it into the other function (p. 277). *Seems like this could violate SRP*  
+* Flags: Generally a bad idea to pass flags as arguments.  
+* static/non-static: if a method calls on a class's instance variables it shouldn't be static  
+
