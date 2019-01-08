@@ -77,3 +77,17 @@ class Program
     }
 }
 ```
+
+### ENUM (p. 275)  
+* Use case: You have a list of constants, like MONDAY = 0, TUESDAY = 1, WEDNESDAY = 2 ... 
+* Makes it (somewhat) difficult to change
+* Instead: Use an enum class  
+```  
+public enum Weekdays {
+    MONDAY = 0,
+    TUESDAY = 1, 
+    WEDNESDAY = 2,
+    ...
+ }
+```
+
