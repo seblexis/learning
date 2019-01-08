@@ -78,7 +78,7 @@ class Program
 }
 ```
 
-### ENUM (p. 275)  
+### Enums (p. 275)  
 **Use case**: You have a list of constants, like MONDAY = 0, TUESDAY = 1, WEDNESDAY = 2 ...  
 **Problems**:  
   * Makes it (somewhat) awkward to change 
@@ -92,9 +92,42 @@ public enum Weekdays {
     ...
  }
 ```
+**Further use case** Enums can also be used to get rid of switch statements (p. 283).  
+**Example**  
+You have a list of different types of intervals (CLOSED, OPEN, LEFT, RIGHT) and you want to check whether a number is within a range given the type of interval.  
+Old code with ugly switch  
+``` 
+int[] range
+int num
+isInRange(range, num) {
+    if (interval == CLOSED) {
+      if (num > range[0] && num < range[1]) return true
+    }
+    else if (interval == OPEN) {
+      if (num >= range[0] && num <= range[1]) return true
+    }
+}
+...
+```  
+New code  
+``` 
+enum INTERVAL {
+    OPEN {
+        public isIN(range, num) {
+            if (num > range[0] && num < range[1]) return true
+        }
+    }
+    ...
+}
+
+isInRange(range, int, INTERVAL) {
+    return INTERVAL.isIN(range, int) // NO SWITCH!
+}
+```
 
 ### Feature envy (p. 278)  
-When a class contains a method (or other things) that rather belongs in another class  
+* When a class contains a method (or other things) that rather belongs in another class  
+* Can also happen within a class: Method that takes an instance of its own class as an argument (p. 281)  
 
 ### Temporary variable (p. 279)  
 * A variable with a short lifetime, limited (local) scope. For example, only used within one method.  
@@ -135,4 +168,6 @@ Improved code:
 * Simplifying functions: If a function is only ever called by another function, think about integrating it into the other function (p. 277). *Seems like this could violate SRP*  
 * Flags: Generally a bad idea to pass flags as arguments.  
 * static/non-static: if a method calls on a class's instance variables it shouldn't be static  
+* Abstract methods: If an abstract method does not depend on anything in the implementation of that class, it doesn't need to be abstract. It's implementation can be written in the abstract class itself. (p. 282)  
+* Logical dependencies should be physical dependencies: If class1 makes an assumption about properties of class2, it is logically dependent on class2. This should be implemented in code (physical dependency), e.g., by class1 retrieving this property from class2. (p. 282, 298)  
 
