@@ -93,3 +93,5 @@ public enum Weekdays {
  }
 ```
 
+### Errata  
+* Simplifying functions: If a function is only ever called by another function, think about integrating it into the other function (p. 277). *Seems like this could violate SRP*
