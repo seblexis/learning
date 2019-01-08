@@ -6,4 +6,7 @@
 * Think about how time might affect your classes and members  
 * Pillars of OOP  
   * Abstraction  
-  * Encapsulation
+  * Encapsulation: allows interaction of classes without classes knowing about the details of other classes.  
+    * Data hiding: protects data  
+    * Implementation hiding: allows to change methods without having to change other parts of code  
+
