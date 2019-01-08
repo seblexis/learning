@@ -79,7 +79,7 @@ class Program
 ```
 
 ### ENUM (p. 275)  
-**Use case**: You have a list of constants, like MONDAY = 0, TUESDAY = 1, WEDNESDAY = 2 ... 
+**Use case**: You have a list of constants, like MONDAY = 0, TUESDAY = 1, WEDNESDAY = 2 ...  
 **Problems**:  
   * Makes it (somewhat) awkward to change 
   * Difficult ot iterate over. Would have to put in a list first 
