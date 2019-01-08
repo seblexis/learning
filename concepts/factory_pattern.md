@@ -1,6 +1,7 @@
 ## Factory pattern 
 *for C#*  
 [Source](https://www.dofactory.com/net/factory-method-design-pattern)  
+[See also: Abstract Factory in *Clean Code*](https://github.com/seblexis/learning/blob/master/clean_code/chapter16.md#abstract-factory-pattern-p-273)
 
 * Definition: Pattern that abstracts creation of class instances. 
 
