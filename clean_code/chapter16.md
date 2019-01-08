@@ -79,9 +79,11 @@ class Program
 ```
 
 ### ENUM (p. 275)  
-* Use case: You have a list of constants, like MONDAY = 0, TUESDAY = 1, WEDNESDAY = 2 ... 
-* Makes it (somewhat) difficult to change
-* Instead: Use an enum class  
+**Use case**: You have a list of constants, like MONDAY = 0, TUESDAY = 1, WEDNESDAY = 2 ... 
+**Problems**:  
+  * Makes it (somewhat) awkward to change 
+  * Difficult ot iterate over. Would have to put in a list first 
+**Solution**: Use an enum class. Cane be iterated over.    
 ```  
 public enum Weekdays {
     MONDAY = 0,
