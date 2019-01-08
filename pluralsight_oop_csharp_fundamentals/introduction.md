@@ -13,3 +13,4 @@
 >* testable  
 >* natural  
 >* well-crafted  
+>by focusing on classes that interact cleanly with each other. 
