@@ -1,5 +1,8 @@
 ## Chapter16: Refactoring Serial Date  
 
+[*Original code*](https://github.com/jfree/jcommon/blob/master/src/main/java/org/jfree/date/SerialDate.java)  
+[*Refactored code*](https://github.com/ludwiggj/CleanCode/blob/master/src/clean/code/chapter16/solution/DayDate.java)
+
 ### Abstract factory pattern (p. 273)  
 **Definition**: A method to encapsulate a group of different factories with a common theme, but different implementation.  
 **Use case**: 
