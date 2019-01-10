@@ -41,3 +41,4 @@ All of these should be independent projects in .NET
     var customer2 = customer1; 
     customer2.Name = "Skai"; 
     ==> customer1.Name == "Skai" //customer2 is now referencing what customer1 is referencing to.  
+
