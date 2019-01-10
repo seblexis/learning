@@ -14,6 +14,8 @@ All of these should be independent projects in .NET
 * Classes are types  
 * Accessibility: internal is accessible to the component within it is defined, e.g., project.  
 * Autoimplemented property: public PropertyName { get; set; } --> use if there is no code needed for get or set  
+* One possible method to order methods within classes: alphabetical (given same accessibility)  
+* Class properties and methods provide a contract to other classes that they can use them. This contract is also called *class interface*  
 
 **Tests**  
 * Best way to run .dll classes: Tests!  
@@ -41,4 +43,7 @@ All of these should be independent projects in .NET
     var customer2 = customer1; 
     customer2.Name = "Skai"; 
     ==> customer1.Name == "Skai" //customer2 is now referencing what customer1 is referencing to.  
-
+* Value types can be nullable: 
+  * ```decimal? num = ...```
+  * Means that num can be null
+ 
