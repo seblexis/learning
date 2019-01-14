@@ -13,6 +13,5 @@
   ```  
 * Misko:  
 > As you can see we have a clear separation of the object graph construction responsibility from the application logic code. If you were to examine the code in more detail you would find that all of the new operators have migrated from the run-phase  to creation-phase ( ... ) And that is very important. New operator in application code is enemy of testing, but new in tests and factories is your friend. (The reason is that in tests we want to use test-doubles which are usually a subclass or an implementation of the parent class. If application code calls new than you can never replace that new with a subclass or different implementation.) The key is that the object creation responsibility and the the application code are two different responsibilities and they should not be mixed. Especially in the main method!
-> The key is that the object creation responsibility and the the application code are two different responsibilities and they should not be mixed
 
   
